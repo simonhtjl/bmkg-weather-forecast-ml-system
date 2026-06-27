@@ -1,9 +1,9 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
 from datetime import datetime
 
-from bmkg_client import fetch_bmkg_data
-from weather_ingestion import save_to_db, flatten_bmkg_data, save_wilayah
-from database import get_connection
+from app.bmkg_client import fetch_bmkg_data
+from app.weather_ingestion import save_to_db, flatten_bmkg_data, save_wilayah
+from app.database import get_connection
 
 scheduler = BlockingScheduler()
 

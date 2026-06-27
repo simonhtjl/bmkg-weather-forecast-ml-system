@@ -1,6 +1,6 @@
 from datetime import datetime
-from database import get_connection
-from config import ADM4
+from app.database import get_connection
+from app.config import ADM4
 
 
 # =========================
