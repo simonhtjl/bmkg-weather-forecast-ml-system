@@ -246,9 +246,6 @@ scheduler.add_job(job, 'cron', minute=0)
 scheduler.start()
 
 print("Scheduler started...")
-print("ADM4:", ADM4)
-print("Running every hour at minute 0")
-print("Press Ctrl+C to stop")
 
 try:
     while True:
