@@ -7,7 +7,7 @@ import os
 import time
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
-import psycopg
+import psycopg2
 import requests
 
 
@@ -20,7 +20,7 @@ ADM4 = "12.17.08.2021"
 
 DB_CONFIG = {
     "host": "localhost",
-    "dbname": "bmkg_db",
+    "database": "bmkg_db",
     "user": "bmkg_user",
     "password": "postgres"
 }
@@ -32,7 +32,7 @@ DB_CONFIG = {
 
 def get_connection():
     """Membuat koneksi ke database PostgreSQL"""
-    return psycopg.connect(**DB_CONFIG)
+    return psycopg2.connect(**DB_CONFIG)
 
 
 # ========================================
