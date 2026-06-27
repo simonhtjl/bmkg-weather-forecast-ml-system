@@ -58,10 +58,7 @@ def job():
         log("FAILED", str(e))
         print("JOB ERROR:", e)
 
-scheduler.add_job(job, 'cron', hour=6, minute=0) 
-scheduler.add_job(job, 'cron', hour=9, minute=0) 
-scheduler.add_job(job, 'cron', hour=18, minute=0) 
-scheduler.add_job(job, 'cron', hour=21, minute=0)
+scheduler.add_job(job, 'cron', minute=0) 
 
 print("Scheduler started...")
 scheduler.start()
