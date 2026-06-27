@@ -1,11 +1,12 @@
-from apscheduler.schedulers.blocking import BlockingScheduler
+from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
 
 from app.bmkg_client import fetch_bmkg_data
 from app.weather_ingestion import save_to_db, flatten_bmkg_data, save_wilayah
 from app.database import get_connection
 
-scheduler = BlockingScheduler()
+
+scheduler = BackgroundScheduler()
 
 
 def log(status, message, start_time=None):
