@@ -20,7 +20,7 @@ ADM4 = "12.17.08.2021"
 
 DB_CONFIG = {
     "host": "localhost",
-    "database": "bmkg_db",
+    "dbname": "bmkg_db",
     "user": "bmkg_user",
     "password": "postgres"
 }
